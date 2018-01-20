@@ -1,9 +1,19 @@
 language: node_js
 
+node_js:
+  - "node"
+
 cache:
   yarn: true
   directories:
   - node_modules
+
+before_install:
+
+  # Make sure we're running the latest version of Yarn.
+  # @see https://docs.travis-ci.com/user/languages/javascript-with-nodejs/#Travis-CI-supports-yarn
+- travis_retry curl -o- --location https://yarnpkg.com/install.sh | bash
+- export PATH="$HOME/.yarn/bin:$PATH"
 
 install:
   - yarn
