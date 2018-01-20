@@ -1,0 +1,29 @@
+language: node_js
+
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
+install:
+  - yarn
+
+script:
+  - yarn lint
+
+deploy:
+  provider: npm
+  email: tdmalone@gmail.com
+  api_key:
+    secure: sVkbR8s3U9rVPlFvzyeZsPvQoir+CEDuHogUB4tlN0SYnp2lc2Sid9wxeX103GftO3Z1lVIly+tBqGTBGuyHN95daMVvWET80R/ubNkiRYOOMDOBqRAuwvhgidpbcOg8+6XNIVdBXsPLtNAHv6spKRhvWIajsUUV6ezIfVb+O6bl+ru4YV0SNGeqVCcF0BLJ16Ux0dOunQfbSAj8IELLxYbCDyYAY9lfaLL720yW6f19E/MxKVDpEyuX8/vNSu3pp3Lq+6XxMbxNTMm5Me+nsf+zVcDgOdsm+R3TDq5fu2HI07NcnNcdu04hZ8AZxqqBLkp2MVf93k1FIOlY29WgvLEMYWqJ245cnvDmojCIk95oo13DZQNb2JaVqiRW45Ik7VQwPtg1Ck+oMkgwiMoujBbhpA4jiUIBme6LAOb6Tk5VYTgL1nbyfhRX08aBX99j0NHxFT7fg++b6ennO3bhtiWgT/oeOy2MTguO4FPNHZimxEWpqBugB7fn1OYitUkXJIFuR56qIy7bgJHMb+GhzG0E+NEAHZ7tDH+90uEUW0y28mIXOMW7pFPXqJxoVRBShj8E/fWi7X+/xsHdpZOdWU4bdYBbfGCO8Z4sYCYuTOv8b+OeW/ST5VJS1ix8lpKdWy5dKMaoVwrca16hmFZz2oDudRlQ0ry3Zt1FrJUHWoE=
+  on:
+    branch: master
+    tags: true
+    repo: tdmalone/eslint-config-tdmalone
+
+notifications:
+  email: false
+  slack:
+    rooms:
+      - secure: "mwvOfCsPz3s8I4ycMhLBGhM3wZF8vCnEpPjk1SyXsYKFJKABwggb52j2XY6FZcnzqMUtuklWMuTmox0jPqWUrU6ckf92TgR2BhS5OnFWozBDPo5rUg5bPIGU+hrc/CUUO9R5O9wWOIkQpS5jv6H/aTpPyM60AL0DMun/vK9Bm+OGeVO0Pmv3vcOhDiNsf+3tF8ci9cmMOSwNIcVt4N3xNW7gkwiyVfKn0BZ9i2rnBNTo/fuOHZafpOVUnBbw01YIpE11OuBeIEy8qEqtAtsRIOBciv8sXXnSpHIxtijkYI6alldE5LqNHYRW1hF6EQmhk6E4NO5nHMFP5KgFMvFfZyHjhrU//53x8yLYbBngH/ClB86JnqxgBtXL1wU2Rz1ODsiy9f6RWf/3Jkvl+atT6ccO2++GwJLfFGdUCw50cOgQ4iq2a4pvcjaASkuga8bbYvHl+EWONBIZz/i45OQxd7KZ1c5NoGso+M795IzxhxRJO2xuAdjsQvtc0fF4AC+wYB61aGeX4iL10Uzcl6SGNRXu6P7F8CiT4FIe+VJcYyXFDj4rzPXniBuS+2Jk3jOfMB9uLIJvF8Jx37EsXL3YzlraF2l4QzWBtvjRMckjTC/0f7/IN+oNBI2Ex88IbJQLjODYt/HFhZ6SbgNNVDNE3+R0CmNUW/P2f/oBMS6aADs="
+    on_start: always

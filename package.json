@@ -1,0 +1,31 @@
+{
+  "name": "eslint-config-tdmalone",
+  "version": "0.0.1",
+  "description": "My personal shareable ESLint config. Based mainly on @chromatix/eslint-config-chromatix but with some of my own changes.",
+  "homepage": "https://github.com/tdmalone/eslint-config-tdmalone#readme",
+  "author": "Tim Malone <tim@timmalone.id.au>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdmalone/eslint-config-tdmalone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tdmalone/eslint-config-tdmalone/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "cross-env DEBUG=eslint:cli-engine eslint --color \"**/*.js\""
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "javascript"
+  ],
+  "dependencies": {
+    "@chromatix/eslint-config-chromatix": "*",
+    "eslint": "^4.8.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.0"
+  }
+}
