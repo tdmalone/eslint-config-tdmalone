@@ -9,6 +9,7 @@ install:
   - yarn
 
 script:
+  - yarn --version
   - yarn lint
 
 deploy:
