@@ -1,31 +1,27 @@
 {
   "name": "eslint-config-tdmalone",
   "version": "0.0.1",
-  "description": "My personal shareable ESLint config. Based mainly on @chromatix/eslint-config-chromatix but with some of my own changes.",
+  "description": "My personal shareable ESLint config. Heavily influenced by the WordPress style. Includes ESLint recommended rules. For use in either browser or Node. Support for ES2018, Jest, JSDoc and jQuery.",
   "homepage": "https://github.com/tdmalone/eslint-config-tdmalone#readme",
-  "author": "Tim Malone <tim@timmalone.id.au>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tdmalone/eslint-config-tdmalone.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tdmalone/eslint-config-tdmalone/issues"
-  },
+  "repository": "git+https://github.com/tdmalone/eslint-config-tdmalone.git",
   "main": "index.js",
+  "author": "Tim Malone <tdmalone@gmail.com>",
+  "license": "MIT",
   "scripts": {
-    "lint": "cross-env DEBUG=eslint:cli-engine eslint --color \"**/*.js\" --ignore-pattern '!.eslintrc.js'"
+    "lint": "DEBUG=eslint:cli-engine eslint --color --ignore-pattern '/coverage/' --ignore-pattern '!.*.js' \"**/*.js\"",
+    "fix": "yarn lint --fix"
   },
   "keywords": [
     "eslint",
     "eslint-config",
-    "javascript"
+    "javascript",
+    "jest"
   ],
   "dependencies": {
-    "@chromatix/eslint-config-chromatix": "*",
-    "eslint": "^4.8.0"
+    "eslint": "^5.6.1",
+    "eslint-config-wordpress": "^2.0.0",
+    "eslint-plugin-dollar-sign": "^1.0.1",
+    "eslint-plugin-jest": "^21.23.0"
   },
-  "devDependencies": {
-    "cross-env": "^5.1.0"
-  }
+  "devDependencies": {}
 }
