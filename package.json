@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tdmalone",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "My personal shareable ESLint config. Heavily influenced by the WordPress style. Includes ESLint recommended rules. For use in either browser or Node. Support for ES2018, Jest, JSDoc and jQuery.",
   "homepage": "https://github.com/tdmalone/eslint-config-tdmalone#readme",
   "repository": "git+https://github.com/tdmalone/eslint-config-tdmalone.git",
