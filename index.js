@@ -14,6 +14,7 @@ module.exports = {
 
   env: {
     browser: true,
+    es6: true, // @see https://github.com/eslint/eslint/issues/9812#issuecomment-355772014
     jest: true,
     jquery: true,
     node: true
